@@ -1,3 +1,8 @@
-# Atividades de Bootstrap-2024
+# Bootstrap Activities-2024
+This repository contains the files of MY projects and activities carried out during the Web Programming II subject in the Bootstrap area. The classes were proposed and given by professor **[Fred](https://github.com/fbamuniz)** at Etec de Registro.
 
-Este repositório contém os arquivos dos MEUS projetos e atividades realizados durante a matéria de Programação Web II na área de Bootstrap. As Aulas foram propóstas e dadas pelo professor **[Fred](https://github.com/fbamuniz)** na Etec de Registro.
+<div align="left">  
+<h2>Technologies Used</h2>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" width="60" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" width="60"/>
+</div>
