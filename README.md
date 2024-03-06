@@ -1,5 +1,5 @@
 # Bootstrap Activities-2024
-This repository contains the files of MY projects and activities carried out during the Web Programming II subject in the Bootstrap area. The classes were proposed and given by professor **[Fred](https://github.com/fbamuniz)** at Etec de Registro.
+This repository contains the files of MY projects and activities carried out during the Web Programming II subject in the Bootstrap area. The classes were proposed and given by teacher **[Fred Barbosa](https://github.com/fbamuniz)** at Etec de Registro.
 
 <div align="left">  
 <h2>Technologies Used</h2>
