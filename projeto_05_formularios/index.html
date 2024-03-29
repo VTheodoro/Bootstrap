@@ -11,53 +11,123 @@
 </head>
 
 <body>
-    <div id="primeiroFormulario">
-        <form action="" class="container p-3">
-            <h3>Informações de Acesso do Candidato:</h3>
 
-            <div class="my-3 row">
-                <div class="my-3 col">
-                    <label class="form-label">Nome:</label>
-                    <input class="form-control" type="text" name="f_nome">
-                </div>
-                <div class="my-3 col">
-                    <label class="form-label">Sobrenome:</label>
-                    <input class="form-control" type="text" name="f_sobrenome">
-                </div>
-            </div>
+    <div id="primeiroFormulario" class="container pt-3">
+        <h3>Informações de Acesso do Candidato:</h3>
 
-            <div class="my-3">
-                <label class=" form-label">CPF:</label>
-                <input type="text" class="form-control" placeholder="Exemplo: 123.456.789-00" name="f_cpf">
-            </div>
+        <form action="#" method="post">
 
-            <div class="my-3">
-                <label class=" form-label">E-mail:</label>
-                <input type="email" class="form-control" placeholder="Exemplo: joão@dominio.com" name="f_email">
-            </div>
+            <table class="table mt-3">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="form-label">Nome:</label>
+                            <input class="form-control" type="text" name="f_nome">
+                        </td>
+                        <td>
+                            <label class="form-label">Sobrenome:</label>
+                            <input class="form-control" type="text" name="f_sobrenome">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="form-label">CPF:</label>
+                            <input type="text" class="form-control" placeholder="123.456.789-00" name="f_cpf">
+                        </td>
+                        <td>
+                            <label class="form-label">E-mail:</label>
+                            <input type="email" class="form-control" placeholder="Exemplo: joao@dominio.com"
+                                name="f_email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="form-label">Senha:</label>
+                            <input type="password" class="form-control" name="f_senha">
+                        </td>
+                        <td>
+                            <label class="form-label">Repita a Senha:</label>
+                            <input type="password" class="form-control" name="f_senha">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div class="my-3 row">
-                <div class="my-3 col">
-                    <label class="form-label">Senha:</label>
-                    <input type="password" class="form-control" name="f_senha">
-                </div>
-                <div class="my-3 col">
-                    <label class="form-label">Repita a Senha:</label>
-                    <input type="password" class="form-control" name="f_senha">
-                    <h6 style="font-size: 70%;" class="d-flex justify-content-center pt-2">SUA SENHA SERÁ SUA MANEIRA DE
-                        ACESSAR
-                        O PORTAL DO CANDIDATO PARA COMPANHAR AS
-                        INFORMAÇÕS DO PROCESSO SELETIVO DO VESTIBULAR.</h6>
-                </div>
-            </div>
         </form>
     </div>
 
     <div id="segundoFormulario" class="container p-3 hidden">
         <h3 class="">Informações Pessoais:</h3>
-        <div class="row my-3"></div>
 
+        <form action="#" method="post">
+
+            <table class="table my-3">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="form-label">Data de Nascimento:</label>
+                            <input type="date" class="form-control" name="f_dataNasc">
+                        </td>
+
+                        <td>
+                            <label class="form-label">RG:</label>
+                            <input type="text" class="form-control" placeholder="000.000.000-00" name="f_rg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="form-label">Gênero:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="f_genero">
+                                <label class="form-check-label" for="masculino">Masculino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="f_genero">
+                                <label class="form-check-label" for="feminino">Feminino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="f_genero">
+                                <label class="form-check-label">Prefiro Não Especificar</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <td>
+                        <label class="form-label">Escolaridade:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="f_escolaridade"
+                                id="ensinoFundamentalCompleto">
+                            <label class="form-check-label">Ensino Fundamental
+                                Completo</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="f_escolaridade"
+                                id="ensinoFundamentalIncompleto">
+                            <label class="form-check-label">Ensino Fundamental
+                                Incompleto</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="f_escolaridade" id="ensinoMedioCompleto">
+                            <label class="form-check-label">Ensino Médio Completo</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="f_escolaridade"
+                                id="ensinoMedioIncompleto">
+                            <label class="form-check-label">Ensino Médio
+                                Incompleto</label>
+                        </div>
+                    </td>
+
+                </tbody>
+            </table>
+        </form>
     </div>
+
+
+
+
+
+
 
     <div class="container">
         <div class="row justify-content-center">

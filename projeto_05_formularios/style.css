@@ -1,3 +1,7 @@
-.hidden {
+/* .hidden {
     display: none;
+} */
+
+.table td, .table th {
+    border: none !important;
 }
