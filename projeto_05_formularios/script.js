@@ -1,7 +1,13 @@
-function mostrarSegundoFormulario() {
-    const primeiroFormulario = document.querySelector('.container.p-3');
-    const segundoFormulario = document.getElementById('segundoFormulario');
+function verificarSenhas() {
+    var senha = document.getElementById("senha").value;
+    var repitaSenha = document.getElementById("repita_senha").value;
+    var mensagemErro = document.getElementById("mensagem_erro");
 
-    primeiroFormulario.classList.add('hidden');
-    segundoFormulario.classList.remove('hidden');
+    if (senha != repitaSenha) {
+        document.getElementById("repita_senha").style.borderColor = "red";
+        mensagemErro.textContent = "As senhas não coincidem!";
+    } else {
+        document.getElementById("repita_senha").style.borderColor = "green";
+        mensagemErro.textContent = "";
+    }
 }

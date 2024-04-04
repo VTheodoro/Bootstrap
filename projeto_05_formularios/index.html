@@ -12,12 +12,16 @@
 
 <body>
 
-    <div id="primeiroFormulario" class="container pt-3">
+    <div class="container font-weight-bold text-center">
+        <h1 class="pt-5">Formuláro de Cadastro para Vestibular com bootstrap</h1>
+        <h4>Por Victor Theodoro</h4>
+    </div>
+
+    <div id="primeiroFormulario" class="container pt-5">
         <h3>Informações de Acesso do Candidato:</h3>
 
-        <form action="#" method="post">
-
-            <table class="table mt-3">
+        <form>
+            <table class="table">
                 <tbody>
                     <tr>
                         <td>
@@ -43,11 +47,14 @@
                     <tr>
                         <td>
                             <label class="form-label">Senha:</label>
-                            <input type="password" class="form-control" name="f_senha">
+                            <input type="password" class="form-control" id="senha" name="f_senha"
+                                onkeyup="verificarSenhas()">
                         </td>
                         <td>
                             <label class="form-label">Repita a Senha:</label>
-                            <input type="password" class="form-control" name="f_senha">
+                            <input type="password" class="form-control" id="repita_senha" name="f_repita_senha"
+                                onkeyup="verificarSenhas()">
+                            <span id="mensagem_erro" style="color: red;"></span>
                         </td>
                     </tr>
                 </tbody>
@@ -56,12 +63,13 @@
         </form>
     </div>
 
-    <div id="segundoFormulario" class="container p-3 hidden">
-        <h3 class="">Informações Pessoais:</h3>
 
-        <form action="#" method="post">
 
-            <table class="table my-3">
+    <div id="segundoFormulario" class="container">
+        <h3>Informações Pessoais Adicionais:</h3>
+
+        <form>
+            <table class="table">
                 <tbody>
                     <tr>
                         <td>
@@ -75,6 +83,34 @@
                         </td>
                     </tr>
                     <tr>
+
+                        <td>
+                            <label class="form-label">Escolaridade:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="f_escolaridade"
+                                    id="ensinoFundamentalCompleto">
+                                <label class="form-check-label">Ensino Fundamental
+                                    Completo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="f_escolaridade"
+                                    id="ensinoFundamentalIncompleto">
+                                <label class="form-check-label">Ensino Fundamental
+                                    Incompleto</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="f_escolaridade"
+                                    id="ensinoMedioCompleto">
+                                <label class="form-check-label">Ensino Médio Completo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="f_escolaridade"
+                                    id="ensinoMedioIncompleto">
+                                <label class="form-check-label">Ensino Médio
+                                    Incompleto</label>
+                            </div>
+                        </td>
+
                         <td>
                             <label class="form-label">Gênero:</label>
                             <div class="form-check">
@@ -91,33 +127,6 @@
                             </div>
                         </td>
                     </tr>
-
-                    <td>
-                        <label class="form-label">Escolaridade:</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="f_escolaridade"
-                                id="ensinoFundamentalCompleto">
-                            <label class="form-check-label">Ensino Fundamental
-                                Completo</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="f_escolaridade"
-                                id="ensinoFundamentalIncompleto">
-                            <label class="form-check-label">Ensino Fundamental
-                                Incompleto</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="f_escolaridade" id="ensinoMedioCompleto">
-                            <label class="form-check-label">Ensino Médio Completo</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="f_escolaridade"
-                                id="ensinoMedioIncompleto">
-                            <label class="form-check-label">Ensino Médio
-                                Incompleto</label>
-                        </div>
-                    </td>
-
                 </tbody>
             </table>
         </form>
@@ -125,27 +134,107 @@
 
 
 
+    <div id="terceiroFormulario" class="container">
+        <h3>Contatos e Endereço Residencial:</h3>
 
+        <form>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="form-label">Telefone:</label>
+                            <input class="form-control" type="text" placeholder="+55 (00) 00000-0000" name="f_telefone">
+                        </td>
+                    </tr>
 
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">Rua:</label>
+                                    <input class="form-control" type="text" name="f_rua">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <label class="form-label">Número:</label>
+                                    <input class="form-control" type="text" name="f_numeroRua">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
 
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <button class="btn btn-lg btn-primary custom-button" onclick="mostrarSegundoFormulario()">Continuar</button>
-        </div>
+                    <tr>
+                        <td style="width: 40%;">
+                            <label class="form-label">Bairro:</label>
+                            <input class="form-control" type="text" name="f_bairro">
+                        </td>
+                        <td style="width: 45%;">
+                            <label class="form-label">Cidade:</label>
+                            <input class="form-control" type="text" name="f_cidade">
+                        </td>
+                        <td style="width: 12%;">
+                            <label class="form-label">Estado:</label>
+                            <select class="form-select" name="f_estado">
+                                <option value="" class="text-secondary">Selecione...</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
+    <div id="quartoFormulario" class="container">
+        <h3>Área de Estudo Desejada:</h3>
+        <form>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="form-label">Selecione a Área de Estudos Que Deseja Se Inscrever:</label>
+                            <select style="width: 50%;" class="form-select" name="f_curso">
+                                <option value="" class="text-secondary">Selecione o Curso Desejado...</option>
+                                <option value="ADM">Adiministração</option>
+                                <option value="DS">Desenvolvimento de Sistemas</option>
+                                <option value="TI">Técnologia da Informação</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
 
 
     <script src="script.js"></script>
